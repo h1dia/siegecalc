@@ -49,6 +49,12 @@ module.exports = {
     'bootstrap-vue/nuxt',
   ],
 
+  server: {
+    port: 8080, // デフォルト: 3000
+    host: '0.0.0.0', // デフォルト: localhost
+  },
+
+
   /*
   ** Build configuration
   */
@@ -60,3 +66,4 @@ module.exports = {
     }
   }
 }
+
