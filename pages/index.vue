@@ -4,7 +4,6 @@
 <div class="calc-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Siege Sensitivity Calculator</h1>
   <p class="lead">振り向き(180° distance)を計算するやつ </p>
-  <a class="twitter-share-button" v-bind:data-text="tweetText">Tweet</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
