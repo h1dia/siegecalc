@@ -19,6 +19,11 @@ module.exports = {
     ]
   },
 
+  generate: {
+    // プロジェクトルートからのパス（この場合は`/htdocs/`以下にビルドされる）
+    dir: 'htdocs'
+  },
+
   /*
   ** Customize the progress-bar color
   */
