@@ -4,6 +4,7 @@
 <div class="calc-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Siege Sensitivity Calculator</h1>
   <p class="lead">振り向き(180° distance)を計算するやつ </p>
+  <a class="twitter-share-button" v-bind:data-text="tweetText()">Tweet</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
@@ -80,6 +81,7 @@ export default {
     name : 'i',
     data: function(){
         return {
+            twHipfire: 0,
             dpi: 400,
             MouseSensitivityMultiplierUnit: 0.02,
             MouseSensitivity: 50,
@@ -96,13 +98,12 @@ export default {
     },
     ACOG : function(){
         return this.hipfire * (1 / Math.min(this.AimDownSights * this.XfactorAiming * 0.35, 1) )
-    },
-    tweetText : function(){
-      return "私の振り向きは腰だめ " + this.hipfire.toFixed(2) + "cm, 等倍サイト " + this.holo.toFixed(2) + "cm, ACOG " + this.ACOG.toFixed(2) + "cmです！ | Siege Sensitivity Calculator"
     }
-
   },
   methods: {
+    tweetText : function(){
+      return "私の振り向きは腰だめ " + this.hipfire.toFixed(2) + "cm, 等倍サイト " + this.holo.toFixed(2) + "cm, ACOG " + this.ACOG.toFixed(2) + "cmです！ | Siege Sensitivity Calculator"
+    } 
   }
 }
 
