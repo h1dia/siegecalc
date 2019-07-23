@@ -1,6 +1,8 @@
 # siegecalc
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ba6a6d46-281a-4fe8-bdfc-741e21437dcc/deploy-status)](https://app.netlify.com/sites/siegecalc/deploys)
 
+シージの振り向きを計算するやつ
 
 ## Build Setup
 
