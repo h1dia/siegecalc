@@ -4,8 +4,9 @@
 <div class="calc-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Siege Sensitivity Calculator</h1>
   <p class="lead">振り向き(180° distance)を計算するやつ </p>
-  <a class="twitter-share-button" v-bind:data-text="tweetText()">Tweet</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <div class="twitter_share">
+      <button class="tweet" @click="twitterShare">Tweet</button>
+  </div>
 </div>
 
 <div class="container">
@@ -101,10 +102,26 @@ export default {
     }
   },
   methods: {
-    tweetText : function(){
-      return "私の振り向きは腰だめ " + this.hipfire.toFixed(2) + "cm, 等倍サイト " + this.holo.toFixed(2) + "cm, ACOG " + this.ACOG.toFixed(2) + "cmです！ | Siege Sensitivity Calculator"
-    } 
+    twitterShare : function(){
+      var shareURL = 'https://twitter.com/intent/tweet?text=' + "私の振り向きは腰だめ " + this.hipfire.toFixed(2) + "cm, 等倍サイト " + this.holo.toFixed(2) + "cm, ACOG " + this.ACOG.toFixed(2) + "cmです！ %7C %23SiegeSensitivityCalculator" + '&url=' + "https://siegecalc.netlify.com/";  
+      location.href = shareURL
+    }
   }
 }
 
 </script>
+
+<style scoped>
+.tweet {
+  background-color: #55acee;
+  border: 2px solid #55acee;
+  border-radius: 0;
+  color: #fff;
+  padding:4px 32px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.tweet:hover {
+  background-color: #fff;
+  color: #55acee;
+}</style>
