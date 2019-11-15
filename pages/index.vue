@@ -90,8 +90,6 @@ export default {
         }    
     },
   computed: {
-  },
-  methods: {
     hipfire : function(){
         return ((0.000001 / this.dpi * 3191858136.0472) * (1 / (this.MouseSensitivityMultiplierUnit * this.MouseSensitivity))) / 2
     },
@@ -100,7 +98,9 @@ export default {
     },
     ACOG : function(){
         return this.hipfire * (1 / Math.min(this.AimDownSights * this.XfactorAiming * 0.35, 1) )
-    },
+    }
+  },
+  methods: {
     tweetText : function(){
       return "私の振り向きは腰だめ " + this.hipfire.toFixed(2) + "cm, 等倍サイト " + this.holo.toFixed(2) + "cm, ACOG " + this.ACOG.toFixed(2) + "cmです！ | Siege Sensitivity Calculator"
     } 
